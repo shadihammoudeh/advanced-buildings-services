@@ -1,8 +1,18 @@
-<html>
+<html lang="en">
     
     <head>
+      
+      <meta charset="UTF-8">
+      
+      <!--The below line of code is needed in order to make sure that the website works with Internet Explorer, by telling IE to use the latest rendering engine:-->
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      <!--The below line of code sets the page width equal to whatever device's width the user is using as well as sets the zoom level equal to 1:-->
+      
+      <meta name="viewport" content="width = device-width, initial-scale = 1">
         
-        <title>Blog App</title>
+        <title>Advanced Buildings Engineering</title>
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         
@@ -10,17 +20,23 @@
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
+        <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+        
     </head>
     
     <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
+  
+  <!--The below used class (i.e. container-fluid) will allow the navbar width to change based on the browser's width and thus will always occupy 100% of the browser's width:-->
   
   <div class="container-fluid">
     
     <!-- Brand and toggle get grouped for better mobile display -->
     
     <div class="navbar-header">
+      
+      <!--The below is needed in order for the collapsed hamburger menu button to appear when the browser's width get below a specific value:-->
       
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         
@@ -36,6 +52,8 @@
       
       <a class="navbar-brand" href="#">ABS</a>
       
+      <p class="navbar-text">Advanced Buildings Services</p>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,10 +62,8 @@
       
       <ul class="nav navbar-nav">
         
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        
-        <li><a href="#">Link</a></li>
-        
+        <li><a href="#">About Us</a></li>
+      
         <li class="dropdown">
           
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expertise <span class="caret"></span></a>
@@ -80,47 +96,21 @@
             
             <li><a href="#">Renovation, Refurbishment and Retrofit Works</a></li>
             
-          </ul>
-          
-        </li>
-        
-      </ul>
-      
-      <form class="navbar-form navbar-left">
-        
-        <div class="form-group">
-          
-          <input type="text" class="form-control" placeholder="Search">
-          
-        </div>
-        
-        <button type="submit" class="btn btn-default">Submit</button>
-        
-      </form>
-      
-      <ul class="nav navbar-nav navbar-right">+
-      
-        <li><a href="#">Link</a></li>
-        
-        <li class="dropdown">
-          
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          
-          <ul class="dropdown-menu">
-            
-            <li><a href="#">Action</a></li>
-            
-            <li><a href="#">Another action</a></li>
-            
-            <li><a href="#">Something else here</a></li>
-            
             <li role="separator" class="divider"></li>
             
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#">3D-Modelling</a></li>
             
           </ul>
           
         </li>
+        
+        <li><a href="#">Projects <span class="sr-only">(current)</span></a></li>
+        
+        <li><a href="#">Careers</a></li>
+        
+        <li><a href="#">Offices</a></li>
+        
+        <li><a href="#">Contact</a></li>
         
       </ul>
       
