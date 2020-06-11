@@ -1,3 +1,34 @@
+body, html {
+    
+    height: 100%;
+}
+
+.bg {
+    
+    /*Notice because of our "public" NodeJS folder there is no need to go back in our folder structure using "../" since our App automatically knows that we are storing all of our static assests*/
+    /*including images inside our "public" directory:*/
+    
+    background-image: url("/images/darkCableStayedBridge.jpg");
+    
+    /*The below code line is needed in order to make the background image spans the full height of the page:*/
+    
+    height: 100%;
+    
+    /*The below lines of code are needed in order to make the background image centre and scale nicely:*/
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.vertical-center {
+    
+    display: flex;
+    align-items: center;
+    
+}
+
 .navbar {
     
     /*The below is needed in order to get rid of the rounded corners around Bootstrap navbar:*/
@@ -5,6 +36,14 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+    
+    /*The below code is needed in order to make the Bootstrap navbar transparent:*/
+    
+    background: rgba(0,0,0,0);
+    
+    /*The below line of code is needed in order to remove the four borders surrounding Bootsrap NavBar:;*/
+    
+    border: none;
     
 }
 

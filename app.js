@@ -13,7 +13,8 @@ app = express();
 
 app.set("view engine", "ejs")
 
-// The below are also default line of codes that we always need to add to out "app.js" file:
+// The below are also default line of codes that we always need to add to out "app.js" file. The below defines our default NodeJS directiory (i.e., "public"). 
+// Which we can then use to tell the application, this is the directory where we are going to have things such as fonts, stylesheets and javascripts. This "public" directory is going to live inside the root of our App:
 
 app.use(express.static("public"));
 
