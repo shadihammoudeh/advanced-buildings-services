@@ -1,6 +1,36 @@
 body, html {
     
     height: 100%;
+    
+}
+
+/*In order to make specific rows inside a container extend in height in order to fill the remaining page's height. The main container containing the rows needs to have this class assigned to it.*/
+/*Since the container needs to be defined as flexibile, and its flexibility is in the column direction (i.e. height, its height can change to suit its contents):*/
+
+.flexible-container-height {
+    
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    
+}
+
+/*The below class is assigned to the rows that are desired to extend in height in order to fill the remaining height of the browser's window. It needs to be flexible and have a "flex-grow" property equivalent to 1:*/
+
+.flex-row {
+    
+    flex-grow: 1;
+    display: flex;
+    
+}
+
+/*The below class is needed in order to align the contents of a specific row (such as columns) in their vertical center:*/
+
+.align-items-center {
+    
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  
 }
 
 .bg {
@@ -22,30 +52,27 @@ body, html {
     
 }
 
-.vertical-center {
-    
-    
-    display: flex;
-    align-items: center;
-    
-}
-
 .navbar {
     
-    /*The below is needed in order to get rid of the rounded corners around Bootstrap navbar:*/
+    /*The below is needed in order to get rid of the rounded corners around Bootstrap navbar (webkit is related to Safari and moz is for Mozilla):*/
     
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     
-    /*The below code is needed in order to make the Bootstrap navbar transparent:*/
+    /*The below code is needed in order to make the Bootstrap navbar transparent if you want to by playing with the last value which is currently set as 1 (i.e. not transparent):*/
     
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,1);
     
     /*The below line of code is needed in order to remove the four borders surrounding Bootsrap NavBar:;*/
     
     border: none;
     
+    /*Below code is needed in order to assign 0 margins to all four sides of the navbar thus, eliminating any white blanks around it:*/
+    
+    margin: 0px;
+  
+
 }
 
 /*The below is needed in order to increase the gap between the items/links listed inside Bootstrap navbar:*/

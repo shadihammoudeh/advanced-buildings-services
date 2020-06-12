@@ -11,17 +11,25 @@
       <!--The below line of code sets the page width equal to whatever device's width the user is using as well as sets the zoom level equal to 1:-->
       
       <meta name="viewport" content="width = device-width, initial-scale = 1">
+      
+      <!--The below sets the title of the website to be displayed inside the browser's tab:-->
         
-      <title>Advanced Buildings Engineering</title>
+      <title>Advanced Buildings Engineering (ABS)</title>
+      
+      <!--Below is the link for the Bootstrap CSS file:-->
         
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      
+      <!--Below is the link for jQuery script that is needed in order to make all Bootstrap features work:-->
         
       <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      
+      <!--Below is the link for Bootstrap compiled and minified Javascript:-->
         
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
       <!--Notice because of our "public" NodeJS folder there is no need to go back in our folder structure using "../" since our App automatically knows that we are storing all of our static assests-->
-      <!--including "CSS" file inside our "public" directory:-->
+      <!--including "CSS" file inside our "public" directory, this why there has been no need in the href below to type "../../public/stylesheets/app.css":-->
         
       <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
         
@@ -29,99 +37,121 @@
     
     <body>
       
-      <!--"navbar-inverse" class below is used in order to get the black coloured navbar. And "sticky-top" is used in order to make sure that as we scroll down the page, the navbar will always stay-->
-      <!--sticked to the top of the page and will not disappear:-->
-
-      <nav class="navbar navbar-inverse sticky-top">
-  
-        <!--The below used class (i.e. container-fluid) will allow the navbar width to change based on the browser's width and thus will always occupy 100% of the browser's width:-->
+      <!--The below "container-fluid" class is a Bootstrap class that will allow the container's width to occupy the full browser's width even when it has changed-->
+      <!--The "flexible-container-height" custom class below (refer to "app.css" for definition) allows the container itself to be flexible in the vertical direction, thus, allowing specific rows inside of it-->
+      <!--to extend in height as needed for example to fill the remaining height of a page:-->
     
-        <div class="container-fluid">
-      
-        <!-- Brand and toggle get grouped for better mobile display -->
-      
-          <div class="navbar-header">
-          
-            <!--The below is needed in order for the collapsed hamburger menu button to appear when the browser's width get below a specific value:-->
-          
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            
-              <span class="sr-only">Toggle navigation</span>
-            
-              <span class="icon-bar"></span>
-            
-              <span class="icon-bar"></span>
-            
-              <span class="icon-bar"></span>
-            
-            </button>
-          
-            <a class="navbar-brand" href="#">ABS</a>
-          
-            <p class="navbar-text">Advanced Buildings Services</p>
-          
-          </div>
-    
-          <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="container-fluid flexible-container-height">
         
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="row">
           
-            <ul class="nav navbar-nav">
+          <!--The below "div" is defined as a Bootstrap "column" which contains Bootstrap NavigationBar inside of it and spans the full width of the page:-->
+          
+          <div class="col">
+          
+            <!--"navbar-inverse" class below is used in order to get the black coloured navbar. And "sticky-top" is used in order to make sure that as we scroll down the page, the navbar will always stay-->
+            <!--sticked to the top of the page and will not disappear:-->
+            <!--Refer to the app.css file for further properties that have been assigned to the navbar class such as no borders and 0 margins all around:-->
+  
+            <nav class="navbar navbar-inverse sticky-top">
+      
+              <!-- Brand and toggle get grouped for better mobile display -->
+          
+              <div class="navbar-header">
+              
+                <!--The below is needed in order for the collapsed hamburger menu button to appear when the browser's width get below a specific value:-->
+                <!--Refer to the "app.css" file, specifically to @media part to know when the NavBar hamburdger icon is set to appear, in this case whenever the browser's width falls below 1054px:-->
+              
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                
+                  <!--The below are needed in order to draw the hamburger icon whenever the navbar items get collapsed (three spans since three horizontal bars are displayed in the hamburger icon):-->
+                
+                  <span class="sr-only">Toggle navigation</span>
+                
+                  <span class="icon-bar"></span>
+                
+                  <span class="icon-bar"></span>
+                
+                  <span class="icon-bar"></span>
+                
+                </button>
+              
+                <a class="navbar-brand" href="#">ABS</a>
+              
+                <p class="navbar-text">Advanced Buildings Services</p>
+              
+              </div>
+        
+              <!-- Collect the nav links, forms, and other content for toggling -->
             
-              <li><a href="#">About Us</a></li>
-          
-              <li class="dropdown">
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
+                <!--Below is the unordered list of items to be displayed inside the navbar:-->
               
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expertise <span class="caret"></span></a>
+                <ul class="nav navbar-nav">
+                
+                  <li><a href="#">About Us</a></li>
               
-                <ul class="dropdown-menu">
+                  <li class="dropdown">
+                  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expertise <span class="caret"></span></a>
+                  
+                    <ul class="dropdown-menu">
+                    
+                      <li><a href="#">Conceptual Design</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">Design Review</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">Site Supervision</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">Design of Steel Structures</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">Design of Concrete Structures</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">Foundations Design</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">Renovation, Refurbishment and Retrofit Works</a></li>
+                    
+                      <li role="separator" class="divider"></li>
+                    
+                      <li><a href="#">3D-Modelling</a></li>
+                    
+                    </ul>
+                  
+                  </li>
                 
-                  <li><a href="#">Conceptual Design</a></li>
+                  <li><a href="#">Projects <span class="sr-only">(current)</span></a></li>
                 
-                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Careers</a></li>
                 
-                  <li><a href="#">Design Review</a></li>
+                  <li><a href="#">Offices</a></li>
                 
-                  <li role="separator" class="divider"></li>
-                
-                  <li><a href="#">Site Supervision</a></li>
-                
-                  <li role="separator" class="divider"></li>
-                
-                  <li><a href="#">Design of Steel Structures</a></li>
-                
-                  <li role="separator" class="divider"></li>
-                
-                  <li><a href="#">Design of Concrete Structures</a></li>
-                
-                  <li role="separator" class="divider"></li>
-                
-                  <li><a href="#">Foundations Design</a></li>
-                
-                  <li role="separator" class="divider"></li>
-                
-                  <li><a href="#">Renovation, Refurbishment and Retrofit Works</a></li>
-                
-                  <li role="separator" class="divider"></li>
-                
-                  <li><a href="#">3D-Modelling</a></li>
+                  <li><a href="#">Contact</a></li>
                 
                 </ul>
               
-              </li>
-            
-              <li><a href="#">Projects <span class="sr-only">(current)</span></a></li>
-            
-              <li><a href="#">Careers</a></li>
-            
-              <li><a href="#">Offices</a></li>
-            
-              <li><a href="#">Contact</a></li>
-            
-            </ul>
-          
-          </div><!-- /.navbar-collapse -->
+              </div><!-- /.navbar-collapse -->
       
-        </div><!-- /.container-fluid -->
-  
-      </nav>
+            </nav>
+            
+          </div>
+          
+        </div>
+        
+        
+          
+
+      
+        

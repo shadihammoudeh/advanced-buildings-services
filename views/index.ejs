@@ -1,29 +1,26 @@
+<%- include('partials/header'); -%>
 
-<div class="bg container-fluid h-100 d-flex">
+<!--The "align-items-center" class below is needed in order to align all the columns inside this row vertically centered. Refer to the "app.css" file for the class definition-->
+<!--However, it is important to note that in order for this to work you have to specify the row containing these columns as a flex row using "flex-row" class:-->
+<!--In our case this has been specified inside the "app.css" file for the custom class "flex-row":-->
+
+<div class="row flex-row align-items-center bg">
     
-        <div class="row">
+    <div class="col">
             
-            <%- include('partials/header'); -%>
-            
-        </div>
-        
-  
-            
-            <div class="jumbotron my-auto container">
-                <h1>Hello, world!</h1>
-                <p>Welcome to Advanced Buildings Services Website</p>
+           <div class="jumbotron">
+                
+                <h1>Welcome to Advanced Buildings Services</h1>
+                
+                <p>We cannot wait to share our passion for structural engineering with you and make sure to provide you with the best service!</p>
+                
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-            </div>
-            
-    
-</div>  
-    
-            
-            
-    
-    <!--"container-fluid" class below is used in order to make sure that the Bootstrap container willt take 100% of the width of the page:-->
+                
+            </div> 
+        
+    </div>
 
-
+</div>
 
 <%- include('partials/footer'); -%>
     
