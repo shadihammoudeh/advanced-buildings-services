@@ -72,7 +72,32 @@ body, html {
     
     margin: 0px;
   
+}
 
+.jumbotron {
+    
+    /*The below is needed in order to set the transparency of Bootstrap jumbotron background:*/
+    
+    background: rgba(0,0,0,0.5);
+    
+    /*The below line of code sets the colour of all the texts contained inside the Bootstrap jumbotron to White:*/
+    
+    color: white;
+    
+}
+
+/*The below is a custom class which is required to override Bootstrap jumbotron color for the main title to a specific Hex colour code:*/
+
+.jumbotron-main-title {
+    
+    color: #BBD981;
+    
+}
+
+.btn {
+    
+    background: #8CC03A;
+    
 }
 
 /*The below is needed in order to increase the gap between the items/links listed inside Bootstrap navbar:*/
