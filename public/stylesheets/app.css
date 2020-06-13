@@ -11,8 +11,9 @@ body, html {
     
     display: flex;
     flex-flow: column;
+    margin: 0;
+    padding: 0;
     height: 100%;
-    
 }
 
 /*The below class is assigned to the rows that are desired to extend in height in order to fill the remaining height of the browser's window. It needs to be flexible and have a "flex-grow" property equivalent to 1:*/
@@ -21,7 +22,7 @@ body, html {
     
     flex-grow: 1;
     display: flex;
-    
+
 }
 
 /*The below class is needed in order to align the contents of a specific row (such as columns) in their vertical center:*/
@@ -38,11 +39,7 @@ body, html {
     /*Notice because of our "public" NodeJS folder there is no need to go back in our folder structure using "../" since our App automatically knows that we are storing all of our static assests*/
     /*including images inside our "public" directory:*/
     
-    background-image: url("/images/darkCableStayedBridge.jpg");
-    
-    /*The below code line is needed in order to make the background image spans the full height of the page:*/
-    
-    height: 100%;
+    background-image: url("/images/cableStayedBridgeBlackBackground.jpg");
     
     /*The below lines of code are needed in order to make the background image centre and scale nicely:*/
     
@@ -71,18 +68,32 @@ body, html {
     /*Below code is needed in order to assign 0 margins to all four sides of the navbar thus, eliminating any white blanks around it:*/
     
     margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   
+}
+
+.jumbotron-homepage-column {
+    
+    margin : 15;
+    padding: 0;
+    
 }
 
 .jumbotron {
     
     /*The below is needed in order to set the transparency of Bootstrap jumbotron background:*/
     
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.2);
     
     /*The below line of code sets the colour of all the texts contained inside the Bootstrap jumbotron to White:*/
     
     color: white;
+    
+    /*In order for the jumbotron edge to stay exactly the same distance awway from the bottom of the NavBar and bottom of container we need to specify same amount value for margin all around:*/
+    
+    margin: 15px;
+    padding: 5px;
     
 }
 
