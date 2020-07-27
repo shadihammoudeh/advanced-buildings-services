@@ -38,6 +38,14 @@ app.get("/homepage", function(req, res){
     
 });
 
+// This is our route which direct the user to the ABOUT US page when the user click on it from the NavBasr:
+
+app.get("/about", function (req, res){
+    
+    res.render("aboutus");
+    
+})
+
 // The below code is needed to set up a PORT in order to be able to run our application:
 
 app.listen(process.env.PORT, process.env.IP, function() {
